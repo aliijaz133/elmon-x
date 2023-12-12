@@ -61,10 +61,12 @@
 .offer-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  padding: 5px 35px;
+  padding: 10px 40px;
   background-color: #82acbe79;
   border: 1px solid #82acbe;
   color: #fff;
   border-radius: 5px;
+  width: 200px;
 }

@@ -16,7 +16,9 @@ import { RecentlyViewedComponent } from './recently-viewed/recently-viewed.compo
 import { ListingComponent } from './listing/listing.component';
 import { ProductsComponent } from './products/products.component';
 import { TrendingDetailsComponent } from './trending-details/trending-details.component';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { MakeOfferComponent } from './make-offer/make-offer.component';
+import { BuyNowComponent } from './buy-now/buy-now.component';
 
 @NgModule({
   declarations: [
@@ -32,12 +34,15 @@ import { TrendingDetailsComponent } from './trending-details/trending-details.co
     ListingComponent,
     ProductsComponent,
     TrendingDetailsComponent,
+    MakeOfferComponent,
+    BuyNowComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

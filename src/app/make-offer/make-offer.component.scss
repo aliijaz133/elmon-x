@@ -1,0 +1,48 @@
+.container {
+  background-color: #191e2b;
+  padding: 20px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.main-container {
+  display: flex;
+  //   flex-direction: column;
+  gap: 20px;
+}
+
+.image-width {
+  width: 250px;
+  height: 275px;
+  border-radius: 10px;
+}
+
+.make-offer__btn {
+  background-color: #0dcaf0;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.select {
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0px 20px;
+  cursor: pointer;
+}
+
+.input-st {
+  height: 30px;
+}
+
+.input-st:focus {
+  outline: none;
+}
+
+.select2 {
+  width: -webkit-fill-available;
+  height: 35px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
