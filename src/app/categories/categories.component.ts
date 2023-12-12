@@ -5,6 +5,8 @@ interface Categories {
   image_title: string;
 }
 
+declare var $: any;
+
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
@@ -34,5 +36,11 @@ export class CategoriesComponent implements OnInit {
     ];
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    $(document).ready(() => {
+      $('#owl-demo').owlCarousel({
+        navigation: true,
+      });
+    });
+  }
 }

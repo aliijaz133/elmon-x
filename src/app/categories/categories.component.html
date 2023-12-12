@@ -5,10 +5,7 @@
   >
     Categories
   </p>
-  <div
-    class="main-container"
-    data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'
-  >
+  <div class="main-container owl-carousel owl-theme">
     <div class="images-group" *ngFor="let getCategories of categories">
       <img
         [src]="getCategories.image_url"
