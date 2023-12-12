@@ -1,0 +1,70 @@
+.main-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+.back-btn {
+  background-color: transparent;
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin-top: 50px;
+}
+
+.back-btn:hover {
+  background-color: #fff;
+  color: #191e2b;
+}
+
+.trending-image {
+  width: 350px;
+  height: 450px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+}
+
+.box-line {
+  height: 300px;
+  border-right: 2px solid #fff;
+}
+
+.horizontal-line {
+  display: flex;
+  align-self: center;
+  width: 250px;
+  border-bottom: 1px solid #fff;
+}
+
+.view-btn {
+  word-wrap: normal;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0px 15px;
+}
+
+.view-btn:hover {
+  background-color: #fff;
+  color: #191e2b;
+}
+
+.offer-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 35px;
+  background-color: #82acbe79;
+  border: 1px solid #82acbe;
+  color: #fff;
+  border-radius: 5px;
+}

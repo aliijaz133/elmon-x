@@ -1,0 +1,16 @@
+<main class="container">
+  <p
+    class="categories-title"
+    style="background-color: transparent; color: #fbfbfb"
+  >
+    Recently Viewed
+  </p>
+  <div
+    class="main-container"
+    data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'
+  >
+    <div class="images-group" *ngFor="let image of recentlyViewed">
+      <img [src]="image.images" alt="Image Preview" class="categories-image" />
+    </div>
+  </div>
+</main>

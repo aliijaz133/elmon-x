@@ -1,0 +1,49 @@
+<main class="container">
+  <p
+    class="categories-title"
+    style="
+      background-color: transparent;
+      color: #fbfbfb;
+      margin-bottom: 30px;
+      font-size: 18px;
+      margin-top: 30px;
+    "
+  >
+    Trending
+  </p>
+  <div class="main-container">
+    <div class="images-group" *ngFor="let getTrending of trending">
+      <img
+        [src]="getTrending.image_url"
+        alt="Image Preview"
+        class="trending-image"
+      />
+      <div class="trending-title">
+        <p style="font-size: 12px; font-family: 'Poppins'; font-weight: 600">
+          {{ getTrending.image_title | truncateText : 20 }}
+        </p>
+        <div style="display: flex; flex-wrap: nowrap">
+          <p style="font-size: 14px; font-family: 'Poppins'; font-weight: 500">
+            Price :
+            <span
+              style="font-size: 12px; font-family: 'Poppins'; font-weight: 600"
+              >{{ getTrending.price | currency }}</span
+            >
+          </p>
+          <p style="font-size: 12px; font-family: 'Poppins'; font-weight: 600">
+            Edition
+            <span
+              style="
+                border: 1px solid #000;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-radius: 5px;
+              "
+              >#5684</span
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

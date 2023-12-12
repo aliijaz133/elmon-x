@@ -1,0 +1,85 @@
+<app-header></app-header>
+<main class="container">
+  <div class="main-container">
+    <p
+      style="
+        color: #fff;
+        font-size: 12px;
+        font-weight: 500;
+        width: 500px;
+        padding: 7px;
+      "
+      class="desc-box"
+    >
+      From the iconic Champs-Élysées and beyond the clouds, the VIA journey
+      continues on a trajectory towards new heights. The VIA Treasure Trunk
+      encloses the latest collectible in this digital quest for the exceptional,
+      VIA Nicolas Ghesquière.
+    </p>
+    <span class="box-line"></span>
+    <div class="btn-containers">
+      <button class="btn-boxes">Created: Dec 2023</button>
+      <button class="btn-boxes">Items: 10</button>
+      <button class="btn-boxes">Chain: ETH</button>
+    </div>
+  </div>
+</main>
+
+<main class="container">
+  <p
+    class="categories-title"
+    style="
+      background-color: transparent;
+      color: #fbfbfb;
+      margin-bottom: 30px;
+      font-size: 18px;
+      margin-top: 30px;
+    "
+  >
+    Trending
+  </p>
+  <div class="main-container2">
+    <div class="images-group" *ngFor="let getTrending of trending">
+      <img
+        [src]="getTrending.image_url"
+        alt="Image Preview"
+        class="trending-image"
+        (click)="openDetails(getTrending)"
+      />
+      <div class="trending-title">
+        <p style="font-size: 12px; font-family: 'Poppins'; font-weight: 600">
+          {{ getTrending.image_title | truncateText : 20 }}
+        </p>
+        <div
+          style="
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+          "
+        >
+          <p style="font-size: 14px; font-family: 'Poppins'; font-weight: 500">
+            Price :
+            <span
+              style="font-size: 12px; font-family: 'Poppins'; font-weight: 600"
+              >{{ getTrending.price | currency }}</span
+            >
+          </p>
+          <p style="font-size: 12px; font-family: 'Poppins'; font-weight: 600">
+            Edition
+            <span
+              style="
+                border: 1px solid #000;
+                background-color: #fbfbfb;
+                color: #000;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-radius: 5px;
+              "
+              >#5684</span
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

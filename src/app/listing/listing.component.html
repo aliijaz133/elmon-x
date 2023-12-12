@@ -1,0 +1,93 @@
+<app-header></app-header>
+<main class="container">
+  <h4 class="h4-title">Listings</h4>
+  <div class="btn-container">
+    <div style="display: flex; gap: 20px">
+      <select name="" id="">
+        <option value=""></option>
+        <option value="name">Name</option>
+        <option value="name">Name</option>
+        <option value="name">Name</option>
+      </select>
+      <select name="" id="">
+        <option value=""></option>
+        <option value="name">Edition type</option>
+        <option value="name">Name</option>
+        <option value="name">Name</option>
+      </select>
+    </div>
+    <select
+      name=""
+      id=""
+      style="
+        border-bottom: 1px solid #fff;
+        background-color: transparent;
+        border-radius: 0px;
+        color: #fff;
+        cursor: pointer;
+      "
+    >
+      <option value="" style="color: black">Lowest Price</option>
+      <option value="" style="color: black">{{ 25 | currency }}</option>
+      <option value="" style="color: black">{{ 35 | currency }}</option>
+      <option value="" style="color: black">{{ 45 | currency }}</option>
+    </select>
+  </div>
+</main>
+
+<section class="container" style="margin-top: 50px">
+  <div class="main-container">
+    <div class="images-container" *ngFor="let image of imageGroup">
+      <div class="image-box">
+        <img
+          [src]="image.image_url"
+          alt="Image Preview"
+          style="
+            width: 300px;
+            height: 200px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+          "
+        />
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            color: #000;
+            background-color: #fbfbfb;
+            padding-bottom: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+          "
+        >
+          <p
+            style="
+              font-size: 12px;
+              font-family: 'Poppins';
+              font-weight: 600;
+              background-color: #fbfbfb;
+              margin-left: 15px;
+              margin-top: 15px;
+            "
+          >
+            Thinker
+            <span
+              style="
+                border: 1px solid #000;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-radius: 5px;
+              "
+              >#5684</span
+            >
+          </p>
+          <button class="buy-btn">Buy On Secondary</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="show-btn__container">
+  <button class="view-btn">View More</button>
+</div>

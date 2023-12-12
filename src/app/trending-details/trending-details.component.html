@@ -1,0 +1,63 @@
+<app-header></app-header>
+<!-- <div *ngIf="trendingItem">
+  <img
+    [src]="trendingItem.image_url"
+    alt="Image Preview"
+    class="trending-image"
+  />
+  <div class="trending-title">
+    <p style="font-size: 12px; font-family: 'Poppins'; font-weight: 600">
+      {{ trendingItem.image_title }}
+    </p>
+  </div>
+</div> -->
+
+<main class="container">
+  <button (click)="backBtn()" class="back-btn">Back</button>
+  <div class="main-container" *ngIf="trendingItem">
+    <img
+      [src]="trendingItem.image_url"
+      alt="Image Preview"
+      class="trending-image"
+    />
+    <span class="box-line"></span>
+    <div style="display: flex; flex-direction: column">
+      <div style="display: flex; justify-content: space-between">
+        <h3>{{ trendingItem.image_title }}</h3>
+        <button class="view-btn">View in 3D</button>
+      </div>
+      <h4>Description</h4>
+      <p>
+        The Gates of Hell is a monumental sculptural work by French artist
+        Auguste Rodin, created between 1880 and 1917. It depicts scenes from
+        Dante Alighieri's Inferno, symbolizing the torments of the damned and
+        the chaos of the underworld. The sculpture features intricate details
+        and a dramatic composition, showcasing writhing bodies and contorted
+        expressions conveying agony and despair. The central figures include
+        “The Thinker” Thinker and “The Kiss,” which were later incorporated into
+        the design. Standing over 20 feet tall and weighing several tons, the
+        gates represent a powerful representation of the concept of the Gates of
+        Hell in art. This is the first ever officially licensed The Gates of
+        Hell NFT as a premium digital artwork in 3D by ElmonX.
+      </p>
+      <span class="horizontal-line"></span>
+      <h4>Details</h4>
+      <div style="display: flex; justify-content: space-between">
+        <h5>Edition Type: Triston Earon</h5>
+        <h5>Listed Editions: 420</h5>
+      </div>
+      <div style="display: flex; justify-content: space-between">
+        <h5>Total Edition: Triston Earon</h5>
+        <h5>Listed Editions: {{ trendingItem.price | currency }}</h5>
+      </div>
+      <div style="display: flex; justify-content: space-between">
+        <button class="offer-btn">
+          <mat-icon>shopping_cart</mat-icon> Buy Now
+        </button>
+        <button class="offer-btn">
+          <mat-icon> local_offer</mat-icon> Make Offer
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
