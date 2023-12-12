@@ -1,1 +1,14 @@
-<p>buy-now works!</p>
+<main class="container">
+  <h3>Buy Now</h3>
+  <div class="main-container" *ngIf="trendingItem">
+    <div style="display: flex; justify-content: space-between">
+      <h4>Edition</h4>
+      <h4>{{ trendingItem.trend_Id }}</h4>
+    </div>
+    <div style="display: flex; justify-content: space-between">
+      <h4>Price</h4>
+      <h4>{{ trendingItem.price }}</h4>
+    </div>
+    <button class="continue-btn" (click)="continuePayment()">Continue</button>
+  </div>
+</main>

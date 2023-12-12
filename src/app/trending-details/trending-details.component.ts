@@ -29,10 +29,10 @@ export class TrendingDetailsComponent implements OnInit {
   }
 
   makeOffer() {
-    this.dialog.open(MakeOfferComponent);
+    this.dialog.open(MakeOfferComponent, { disableClose: true });
   }
 
   buyNow() {
-    this.dialog.open(BuyNowComponent);
+    this.dialog.open(BuyNowComponent, { disableClose: true });
   }
 }

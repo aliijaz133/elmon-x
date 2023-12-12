@@ -1,0 +1,25 @@
+.container {
+  background-color: #191e2b;
+  color: #fff;
+  padding: 40px 20px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  width: 400px;
+}
+
+.main-container {
+  background-color: #0e1118;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.continue-btn {
+  background-color: #0dcaf0;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
