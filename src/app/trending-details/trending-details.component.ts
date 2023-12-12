@@ -35,4 +35,8 @@ export class TrendingDetailsComponent implements OnInit {
   buyNow() {
     this.dialog.open(BuyNowComponent, { disableClose: true });
   }
+
+  openList() {
+    this.router.navigate(['/sale-listing']);
+  }
 }

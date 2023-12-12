@@ -1,0 +1,8 @@
+<h2>Edit Price</h2>
+<p>Current Price: {{ price | currency }}</p>
+
+<input type="number" [(ngModel)]="editedPrice" placeholder="Enter new price" />
+
+
+<button mat-button (click)="onSaveClick()">Save</button>
+<button mat-button [mat-dialog-close]="'close'">Close</button>

@@ -19,6 +19,9 @@ import { TrendingDetailsComponent } from './trending-details/trending-details.co
 import { MatDialogModule } from '@angular/material/dialog';
 import { MakeOfferComponent } from './make-offer/make-offer.component';
 import { BuyNowComponent } from './buy-now/buy-now.component';
+import { SaleListingComponent } from './sale-listing/sale-listing.component';
+import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,8 @@ import { BuyNowComponent } from './buy-now/buy-now.component';
     TrendingDetailsComponent,
     MakeOfferComponent,
     BuyNowComponent,
+    SaleListingComponent,
+    EditDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +48,8 @@ import { BuyNowComponent } from './buy-now/buy-now.component';
     BrowserAnimationsModule,
     MatIconModule,
     MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

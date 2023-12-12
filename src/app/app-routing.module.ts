@@ -4,6 +4,7 @@ import { ElmonXComponent } from './elmon-x/elmon-x.component';
 import { ListingComponent } from './listing/listing.component';
 import { ProductsComponent } from './products/products.component';
 import { TrendingDetailsComponent } from './trending-details/trending-details.component';
+import { SaleListingComponent } from './sale-listing/sale-listing.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'trending-details',
     component: TrendingDetailsComponent,
+  },
+  {
+    path: 'sale-listing',
+    component: SaleListingComponent,
   },
   {
     path: '**',

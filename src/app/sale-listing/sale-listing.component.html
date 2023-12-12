@@ -1,0 +1,46 @@
+<app-header></app-header>
+<main class="container">
+  <div
+    style="
+      display: flex;
+      gap: 10px;
+      color: #000;
+      background-color: #fff;
+      padding: 15px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    "
+  >
+    <mat-icon>playlist_add_check</mat-icon>Active Listing
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="th-t">Edition Number</th>
+        <th class="th-t">Image</th>
+        <th class="th-t">Name</th>
+        <th class="th-t">Price</th>
+        <th class="th-t">Expiration date</th>
+        <th class="th-t">Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let trends of trending; let index = index">
+      <tr>
+        <td>{{ trends.trend_Id }}</td>
+        <td>
+          <img
+            [src]="trends.image_url"
+            alt="Image Preview"
+            style="width: 60px; height: 40px"
+          />
+        </td>
+        <td>{{ trends.image_title | truncateText : 10 }}</td>
+        <td>{{ trends.price | currency }}</td>
+        <td>{{ timeNow | date : "dd/mm/yyyy" }}</td>
+        <td>
+          <button class="edit-btn" (click)="editDialog(index)">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</main>
