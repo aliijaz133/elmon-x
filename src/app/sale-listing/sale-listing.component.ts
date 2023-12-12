@@ -141,18 +141,16 @@ export class SaleListingComponent implements OnInit {
 
     const dialogRef: MatDialogRef<EditDialogComponent, number> =
       this.dialog.open(EditDialogComponent, {
-        data: trendItem.price, // Pass the price value to the dialog
+        data: trendItem.price,
       });
 
     dialogRef.componentInstance.priceUpdated.subscribe(
       (updatedPrice: number) => {
-        // Update the price in the list
         this.trending[index].price = updatedPrice;
       }
     );
 
     dialogRef.afterClosed().subscribe((result) => {
-      // Handle the result if needed
       console.log('Dialog closed with result:', result);
     });
   }
