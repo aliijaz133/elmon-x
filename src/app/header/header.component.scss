@@ -10,8 +10,12 @@ a {
 }
 
 .active {
-  text-decoration: #fff underline;
   font-weight: bold;
+  border-bottom: 2px solid #fff !important;
+}
+.navbar-nav  li a{
+  border-bottom: 2px solid transparent;
+  font-size: 16px;
 }
 
 .navbar-toggler-icon {
