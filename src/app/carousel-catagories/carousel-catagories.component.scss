@@ -1,23 +1,23 @@
-.card{
-    border: none;    
-    border-radius: 13px;
-    min-height: 245px;
+.card {
+  border: none;
+  border-radius: 13px;
+  min-height: 245px;
 }
-.card-title, .card-detail{
-font-size: 20px;
-font-weight: 500;
-margin: 0 !important;
-
+.card-title,
+.card-detail {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 !important;
 }
 .carousel-control-prev {
-    left: -8%;
+  left: -8%;
 }
 .carousel-control-next {
-    right: -8%;
+  right: -8%;
 }
 .carousel-control-prev-icon {
-    background-image: url('../../assets/images/backward.png') !important;
+  background-image: url("../../assets/images/backward.png") !important;
 }
 .carousel-control-next-icon {
-    background-image: url('../../assets/images/forward.png') !important;
+  background-image: url("../../assets/images/forward.png") !important;
 }

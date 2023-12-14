@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+// carousel-catagories.component.ts
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-carousel-catagories',
   templateUrl: './carousel-catagories.component.html',
-  styleUrls: ['./carousel-catagories.component.scss']
+  styleUrls: ['./carousel-catagories.component.scss'],
 })
 export class CarouselCatagoriesComponent {
+  displayedCards: any[] = [];
+  currentIndex = 0;
+
+  constructor() {
+    this.updateDisplayedCards();
+  }
+
   cards = [
     { title: 'Pyramids', imageUrl: '../../assets/images/payramids.png' },
     { title: 'Bitcoin', imageUrl: '../../assets/images/bitcoin.png' },
@@ -18,17 +26,36 @@ export class CarouselCatagoriesComponent {
     { title: 'PartnerDrop', imageUrl: '../../assets/images/partner.png' },
     { title: 'Art', imageUrl: '../../assets/images/art.png' },
   ];
-  displayedCards() {
-    if (window.innerWidth < 992) {
-      return this.cards.slice(0, 2); // Display 2 cards for smaller screens
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.updateDisplayedCards();
+  }
+
+  private updateDisplayedCards() {
+    if (window.innerWidth < 720) {
+      this.displayedCards = [this.cards[this.currentIndex]];
+    } else if (window.innerWidth < 992) {
+      this.displayedCards = this.cards.slice(
+        this.currentIndex,
+        this.currentIndex + 2
+      );
     } else {
-      return this.cards.slice(0, 4); // Display 4 cards for larger screens
+      this.displayedCards = this.cards.slice(
+        this.currentIndex,
+        this.currentIndex + 4
+      );
     }
   }
 
-  constructor() {
-    window.addEventListener('resize', () => {
-      this.displayedCards(); // Update displayed cards when the window size changes
-    });
+  next() {
+    this.currentIndex = (this.currentIndex + 1) % this.cards.length;
+    this.updateDisplayedCards();
+  }
+
+  previous() {
+    this.currentIndex =
+      (this.currentIndex - 1 + this.cards.length) % this.cards.length;
+    this.updateDisplayedCards();
   }
 }
