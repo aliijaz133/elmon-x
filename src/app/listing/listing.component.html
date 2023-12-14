@@ -1,93 +1,72 @@
 <app-header></app-header>
-<main class="container">
-  <h4 class="h4-title">Listings</h4>
-  <div class="btn-container">
-    <div style="display: flex; gap: 20px">
-      <select name="" id="">
-        <option value=""></option>
-        <option value="name">Name</option>
-        <option value="name">Name</option>
-        <option value="name">Name</option>
-      </select>
-      <select name="" id="">
-        <option value=""></option>
-        <option value="name">Edition type</option>
-        <option value="name">Name</option>
-        <option value="name">Name</option>
-      </select>
-    </div>
-    <select
-      name=""
-      id=""
-      style="
-        border-bottom: 1px solid #fff;
-        background-color: transparent;
-        border-radius: 0px;
-        color: #fff;
-        cursor: pointer;
-      "
-    >
-      <option value="" style="color: black">Lowest Price</option>
-      <option value="" style="color: black">{{ 25 | currency }}</option>
-      <option value="" style="color: black">{{ 35 | currency }}</option>
-      <option value="" style="color: black">{{ 45 | currency }}</option>
-    </select>
-  </div>
-</main>
+<div class="container">
 
-<section class="container" style="margin-top: 50px">
-  <div class="main-container">
-    <div class="images-container" *ngFor="let image of imageGroup">
-      <div class="image-box">
-        <img
-          [src]="image.image_url"
-          alt="Image Preview"
-          style="
-            width: 300px;
-            height: 200px;
-            border-top-right-radius: 10px;
-            border-top-left-radius: 10px;
-          "
-        />
-        <div
-          style="
-            display: flex;
-            flex-direction: column;
-            color: #000;
-            background-color: #fbfbfb;
-            padding-bottom: 10px;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-          "
-        >
-          <p
-            style="
-              font-size: 12px;
-              font-family: 'Poppins';
-              font-weight: 600;
-              background-color: #fbfbfb;
-              margin-left: 15px;
-              margin-top: 15px;
-            "
-          >
-            Thinker
-            <span
-              style="
-                border: 1px solid #000;
-                padding-left: 10px;
-                padding-right: 10px;
-                border-radius: 5px;
-              "
-              >#5684</span
-            >
-          </p>
-          <button class="buy-btn">Buy On Secondary</button>
+  <h4 class="h4-title">Listings</h4>
+  
+  <div class="d-flex justify-content-between align-items-center listing-top flex-wrap">
+    <div class="d-flex py-3 flex-wrap">
+        <div class="dropdown me-0 me-lg-2 me-md-2">
+            <button class="btn btn-secondary dropdown-toggle bg-light text-dark" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                Claude Monet
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+              <li><a class="dropdown-item" href="#">name</a></li>
+              <li><a class="dropdown-item" href="#">name</a></li>
+              <li><a class="dropdown-item" href="#">name</a></li>
+              <li><a class="dropdown-item" href="#">name</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle bg-light text-dark" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                Edition Type
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+              <li><a class="dropdown-item" href="#">name</a></li>
+              <li><a class="dropdown-item" href="#">name</a></li>
+              <li><a class="dropdown-item" href="#">name</a></li>
+              <li><a class="dropdown-item" href="#">name</a></li>
+            </ul>
+          </div>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="border-bottom btn text-light rounded-0 px-0">lowest price</button>
+      <button type="button" class="btn text-light dropdown-toggle dropdown-toggle-split " data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+        <span class="visually-hidden">Toggle Dropdown</span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">{{ 25 | currency }}</a></li>
+        <li><a class="dropdown-item" href="#">{{ 35 | currency }}</a></li>
+        <li><a class="dropdown-item" href="#">{{ 45 | currency }}</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  
+  
+  <div class="my-4 card-chunks">
+    <ng-container *ngFor="let chunk of imageGroup | chunk: 4">
+      <div class="row">
+        <div *ngFor="let image of imageGroup" class="col-md-3 col-sm-6 d-block mb-4">
+          <!-- Your card content -->
+          <div class="bg-light rounded-3">
+            <div>
+              <img class="w-100" [src]="image.image_url" alt="">
+            </div>
+            <div class="p-3">
+                <h5 class="text-dark"> Thinker <span class="ms-2">#5684</span></h5>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-primary border-0 w-100" type="button">Buy On Secondary</button>
+              </div>
+            </div>
+        </div>
         </div>
       </div>
-    </div>
+    </ng-container>
   </div>
-</section>
+  
+  <div class="show-btn__container">
+    <button class="view-btn">View More</button>
+  </div>
 
-<div class="show-btn__container">
-  <button class="view-btn">View More</button>
 </div>
+

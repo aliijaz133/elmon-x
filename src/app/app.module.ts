@@ -22,6 +22,9 @@ import { BuyNowComponent } from './buy-now/buy-now.component';
 import { SaleListingComponent } from './sale-listing/sale-listing.component';
 import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ChunkPipe } from '../app/listing/chunk.pipe';
+import { CarouselCatagoriesComponent } from './carousel-catagories/carousel-catagories.component';
+import { CarouselTrendingComponent } from './carousel-trending/carousel-trending.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BuyNowComponent,
     SaleListingComponent,
     EditDialogComponent,
+    ChunkPipe,
+    CarouselCatagoriesComponent,
+    CarouselTrendingComponent,
   ],
   imports: [
     BrowserModule,

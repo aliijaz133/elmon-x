@@ -1,0 +1,42 @@
+h5{
+    font-family: Poppins;
+font-size: 12px;
+font-weight: 600;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: left;
+}
+p{
+font-size: 14px;
+font-weight: 500;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+p span{
+font-size: 8px;
+font-weight: 500;
+line-height: 12px;
+letter-spacing: 0em;
+text-align: left;
+padding: 3px 8px;
+border: 1px solid #000;
+}
+.card{
+    border: none;
+    border-radius: 14px;
+}
+
+.carousel-control-prev {
+    left: -8%;
+}
+.carousel-control-next {
+    right: -8%;
+}
+.carousel-control-prev-icon {
+    background-image: url('../../assets/images/backward.png') !important;
+}
+.carousel-control-next-icon {
+    background-image: url('../../assets/images/forward.png') !important;
+}

@@ -1,0 +1,57 @@
+<div class="container py-5">
+
+    
+    <h1>Trending</h1>
+
+    <!-- Second Carousel -->
+    <div id="carouselExample2" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- First carousel item -->
+          <div class="carousel-item active">
+            <div class="row">
+              <!-- Display cards 0-3 -->
+              <div *ngFor="let card of displayedCards()" class="col-lg-3 col-md-6 col-12">
+                <div class="card">
+                  <img [src]="card.imageUrl" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ card.title }}</h5>
+                    <div class="d-flex justify-content-between">
+                        <p>Price:  {{ card.price }}</p> <!-- Display description -->
+                        <p>Edition:  <span>#5684</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Second carousel item -->
+          <div class="carousel-item">
+            <div class="row">
+              <!-- Display cards 4-7 -->
+              <div *ngFor="let card of displayedCards()" class="col-lg-3 col-md-6 col-12">
+                <div class="card">
+                  <img [src]="card.imageUrl" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ card.title }}</h5>
+                    <div class="d-flex justify-content-between">
+                        <p>Price:  {{ card.price }}</p> <!-- Display description -->
+                        <p>Edition:  <span>#5684</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+  
