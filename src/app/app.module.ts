@@ -8,7 +8,6 @@ import { HeaderComponent } from './header/header.component';
 import { TokenFormatPipe } from './pipes/token-format.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
-import { TrendingComponent } from './trending/trending.component';
 import { TruncateTextPipe } from './pipes/truncate-text.pipe';
 import { ScrollingCarouselDirective } from './pipes/scrolling-carousel.directive';
 import { RecentlyViewedComponent } from './recently-viewed/recently-viewed.component';
@@ -31,7 +30,6 @@ import { CarouselTrendingComponent } from './carousel-trending/carousel-trending
     ElmonXComponent,
     HeaderComponent,
     TokenFormatPipe,
-    TrendingComponent,
     TruncateTextPipe,
     ScrollingCarouselDirective,
     RecentlyViewedComponent,
