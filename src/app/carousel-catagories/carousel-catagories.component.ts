@@ -33,7 +33,7 @@ export class CarouselCatagoriesComponent {
   }
 
   private updateDisplayedCards() {
-    if (window.innerWidth < 720) {
+    if (window.innerWidth < 769) {
       this.displayedCards = [this.cards[this.currentIndex]];
     } else if (window.innerWidth < 992) {
       this.displayedCards = this.cards.slice(
