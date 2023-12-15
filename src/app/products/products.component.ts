@@ -16,6 +16,8 @@ interface Trending {
 export class ProductsComponent implements OnInit {
   trending: Trending[] = [];
 
+  showLoader: boolean = false;
+
   selectedTrendingItem: any;
 
   constructor(private router: Router) {
@@ -119,7 +121,13 @@ export class ProductsComponent implements OnInit {
     ];
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.showLoader = true;
+
+    setTimeout(() => {
+      this.showLoader = false;
+    });
+  }
 
   openDetails(trendingItem: any): void {
     this.selectedTrendingItem = trendingItem;

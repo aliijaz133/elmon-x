@@ -1,4 +1,4 @@
-import { Component, OnInit, } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-listing',
@@ -6,6 +6,8 @@ import { Component, OnInit, } from '@angular/core';
   styleUrls: ['./listing.component.scss'],
 })
 export class ListingComponent implements OnInit {
+  showLoader: boolean = false;
+
   imageGroup: any = [
     {
       image_url: '../../assets/images/rectangle-982-9fj.png',
@@ -45,9 +47,13 @@ export class ListingComponent implements OnInit {
     },
   ];
 
-
-  
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.showLoader = true;
+
+    setTimeout(() => {
+      this.showLoader = false;
+    });
+  }
 }

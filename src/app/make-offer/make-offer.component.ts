@@ -1,5 +1,5 @@
-import { DialogRef } from '@angular/cdk/dialog';
 import { Component, OnInit, Input } from '@angular/core';
+import { DialogRef } from '@angular/cdk/dialog';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -10,6 +10,8 @@ import { ActivatedRoute } from '@angular/router';
 export class MakeOfferComponent implements OnInit {
   @Input() trendingItem: any;
 
+  showLoader: boolean = false;
+
   constructor(
     private route: ActivatedRoute,
     private dialogRef: DialogRef<MakeOfferComponent>
@@ -19,6 +21,12 @@ export class MakeOfferComponent implements OnInit {
     this.route.queryParams.subscribe((params) => {
       this.trendingItem = JSON.parse(params['item']);
     });
+
+    this.showLoader = true;
+
+    setTimeout(()=> {
+      this.showLoader = false
+    })
   }
 
   closeDialog() {

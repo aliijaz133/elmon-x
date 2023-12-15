@@ -1,4 +1,4 @@
-import { Component, Inject, EventEmitter } from '@angular/core';
+import { Component, Inject, EventEmitter, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -6,8 +6,10 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   templateUrl: './edit-dialog.component.html',
   styleUrls: ['./edit-dialog.component.scss'],
 })
-export class EditDialogComponent {
+export class EditDialogComponent implements OnInit {
   editedPrice: number;
+
+  showLoader: boolean = false;
 
   priceUpdated = new EventEmitter<number>();
 
@@ -16,6 +18,14 @@ export class EditDialogComponent {
     @Inject(MAT_DIALOG_DATA) public price: number
   ) {
     this.editedPrice = price;
+  }
+
+  ngOnInit(): void {
+    this.showLoader = true;
+
+    setTimeout(() => {
+      this.showLoader = false;
+    });
   }
 
   onInputChange(event: any): void {

@@ -23,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChunkPipe } from '../app/listing/chunk.pipe';
 import { CarouselCatagoriesComponent } from './carousel-catagories/carousel-catagories.component';
 import { CarouselTrendingComponent } from './carousel-trending/carousel-trending.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { CarouselTrendingComponent } from './carousel-trending/carousel-trending
     ChunkPipe,
     CarouselCatagoriesComponent,
     CarouselTrendingComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,

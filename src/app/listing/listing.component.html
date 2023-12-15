@@ -1,71 +1,107 @@
 <div class="container">
-
   <h4 class="h4-title">Listings</h4>
-  
-  <div class="d-flex justify-content-between align-items-center listing-top flex-wrap">
+
+  <div
+    class="d-flex justify-content-between align-items-center listing-top flex-wrap"
+  >
     <div class="d-flex py-3 flex-wrap">
-        <div class="dropdown me-0 me-lg-2 me-md-2">
-            <button class="btn btn-secondary dropdown-toggle bg-light text-dark" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                Claude Monet
-            </button>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-              <li><a class="dropdown-item" href="#">name</a></li>
-              <li><a class="dropdown-item" href="#">name</a></li>
-              <li><a class="dropdown-item" href="#">name</a></li>
-              <li><a class="dropdown-item" href="#">name</a></li>
-            </ul>
-          </div>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle bg-light text-dark" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                Edition Type
-            </button>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-              <li><a class="dropdown-item" href="#">name</a></li>
-              <li><a class="dropdown-item" href="#">name</a></li>
-              <li><a class="dropdown-item" href="#">name</a></li>
-              <li><a class="dropdown-item" href="#">name</a></li>
-            </ul>
-          </div>
+      <div class="dropdown me-0 me-lg-2 me-md-2">
+        <button
+          class="btn btn-secondary dropdown-toggle bg-light text-dark"
+          type="button"
+          id="dropdownMenuButton2"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Claude Monet
+        </button>
+        <ul
+          class="dropdown-menu dropdown-menu-dark"
+          aria-labelledby="dropdownMenuButton2"
+        >
+          <li><a class="dropdown-item" href="#">name</a></li>
+          <li><a class="dropdown-item" href="#">name</a></li>
+          <li><a class="dropdown-item" href="#">name</a></li>
+          <li><a class="dropdown-item" href="#">name</a></li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle bg-light text-dark"
+          type="button"
+          id="dropdownMenuButton2"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Edition Type
+        </button>
+        <ul
+          class="dropdown-menu dropdown-menu-dark"
+          aria-labelledby="dropdownMenuButton2"
+        >
+          <li><a class="dropdown-item" href="#">name</a></li>
+          <li><a class="dropdown-item" href="#">name</a></li>
+          <li><a class="dropdown-item" href="#">name</a></li>
+          <li><a class="dropdown-item" href="#">name</a></li>
+        </ul>
+      </div>
     </div>
     <div class="btn-group">
-      <button type="button" class="border-bottom btn text-light rounded-0 p-0">lowest price</button>
-      <button type="button" class="btn text-light dropdown-toggle dropdown-toggle-split " data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+      <button type="button" class="border-bottom btn text-light rounded-0 p-0">
+        lowest price
+      </button>
+      <button
+        type="button"
+        class="btn text-light dropdown-toggle dropdown-toggle-split"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        data-bs-reference="parent"
+      >
         <span class="visually-hidden">Toggle Dropdown</span>
       </button>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">{{ 25 | currency }}</a></li>
-        <li><a class="dropdown-item" href="#">{{ 35 | currency }}</a></li>
-        <li><a class="dropdown-item" href="#">{{ 45 | currency }}</a></li>
+        <li>
+          <a class="dropdown-item" href="#">{{ 25 | currency }}</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">{{ 35 | currency }}</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">{{ 45 | currency }}</a>
+        </li>
       </ul>
     </div>
   </div>
-  
-  
-  
+
   <div class="my-4 card-chunks">
-    <ng-container *ngFor="let chunk of imageGroup | chunk: 4">
+    <ng-container *ngFor="let chunk of imageGroup | chunk : 4">
       <div class="row">
-        <div *ngFor="let image of imageGroup" class="col-md-3 col-sm-6 d-block mb-4">
+        <div
+          *ngFor="let image of imageGroup"
+          class="col-md-3 col-sm-6 d-block mb-4"
+        >
           <!-- Your card content -->
           <div class="bg-light rounded-3">
             <div>
-              <img class="w-100" [src]="image.image_url" alt="">
+              <img class="w-100" [src]="image.image_url" alt="" />
             </div>
             <div class="p-3">
-                <h5 class="text-dark"> Thinker <span class="ms-2">#5684</span></h5>
+              <h5 class="text-dark">Thinker <span class="ms-2">#5684</span></h5>
               <div class="d-flex justify-content-between">
-                <button class="btn btn-primary border-0 w-100" type="button">Buy On Secondary</button>
+                <button class="btn btn-primary border-0 w-100" type="button">
+                  Buy On Secondary
+                </button>
               </div>
             </div>
-        </div>
+          </div>
         </div>
       </div>
     </ng-container>
   </div>
-  
+
   <div class="show-btn__container">
     <button class="view-btn">View More</button>
   </div>
-
 </div>
 
+<app-loader *ngIf="showLoader"></app-loader>
