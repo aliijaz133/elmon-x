@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 interface Trending {
   image_url: string;
@@ -20,7 +21,7 @@ export class ProductsComponent implements OnInit {
 
   selectedTrendingItem: any;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private toastr: ToastrService) {
     this.trending = [
       {
         image_url: '../../assets/images/rectangle-979.png',
@@ -134,5 +135,7 @@ export class ProductsComponent implements OnInit {
     this.router.navigate(['/trending-details'], {
       queryParams: { item: JSON.stringify(trendingItem) },
     });
+
+    this.toastr.success('Open Trending Detail');
   }
 }

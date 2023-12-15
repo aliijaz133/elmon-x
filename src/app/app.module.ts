@@ -24,6 +24,7 @@ import { ChunkPipe } from '../app/listing/chunk.pipe';
 import { CarouselCatagoriesComponent } from './carousel-catagories/carousel-catagories.component';
 import { CarouselTrendingComponent } from './carousel-trending/carousel-trending.component';
 import { LoaderComponent } from './loader/loader.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { LoaderComponent } from './loader/loader.component';
     MatDialogModule,
     FormsModule,
     ReactiveFormsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
