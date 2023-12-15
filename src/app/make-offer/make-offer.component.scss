@@ -5,6 +5,28 @@
   border-radius: 5px;
 }
 
+.eth-detail-box, .offer-box{
+  background-color:#0E1118;
+  border-radius: 5px;
+}
+
+.make-offer-title{
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+.make-offer-title h4{
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  padding: 5px;
+}
+.make-offer-title-responsive{
+  display: none;
+}
 .main-container {
   display: flex;
   //   flex-direction: column;
@@ -12,9 +34,10 @@
 }
 
 .image-width {
-  width: 250px;
+  width: 100%;
   height: 275px;
   border-radius: 10px;
+  object-fit: contain;
 }
 
 .make-offer__btn {
@@ -29,6 +52,7 @@
   color: #fff;
   border-radius: 10px;
   padding: 0px 20px;
+  margin-right: 100px;
   cursor: pointer;
 }
 
@@ -45,4 +69,32 @@
   height: 35px;
   border-radius: 5px;
   margin-bottom: 10px;
+}
+
+
+@media screen and (max-width:991px) {
+  .select {
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    padding: 0px 20px;
+    margin-right: unset;
+    cursor: pointer;
+  }
+  .make-offer-title-full-screen{
+    display: none;
+  }
+  .make-offer-title-responsive{
+    display: flex;
+    margin: 20px 0;
+    padding: 0 10px;
+  }
+  .image-width{
+    border: 1px solid #fff;
+  }
+}
+@media screen and (max-width:575px) {
+  .select {
+    margin-left: -100px;
+  }
 }

@@ -1,6 +1,6 @@
 .card {
   border: none;
-  border-radius: 13px;
+  border-radius: 15px;
   min-height: 245px;
 }
 .card-title,
@@ -8,6 +8,10 @@
   font-size: 20px;
   font-weight: 500;
   margin: 0 !important;
+}
+.card-img-top{
+  height: 180px;
+  object-fit: cover;
 }
 .carousel-control-prev {
   left: -8%;

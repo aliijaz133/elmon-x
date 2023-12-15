@@ -1,4 +1,77 @@
-<main class="container">
+<div class="container">
+  <h3 >Make An Offer</h3>
+  <div class="row">
+    
+    <div class="col-lg-6">
+      <div class="mb-4 make-offer-title make-offer-title-full-screen">
+        <h4>{{ trendingItem.image_title | truncateText : 10 }}</h4>
+        <h4>{{ trendingItem.trend_Id }}</h4>
+      </div>
+      <div class="make-offer-img text-center">
+        <img
+        [src]="trendingItem.image_url"
+        alt="Image Preview"
+        class="image-width"
+      />
+      </div>
+
+      <div class="make-offer-title make-offer-title-responsive">
+        <h4>{{ trendingItem.image_title | truncateText : 10 }}</h4>
+        <h4>{{ trendingItem.trend_Id }}</h4>
+      </div>
+
+    </div>
+
+    <div class="col-lg-6">
+
+      <div class="eth-detail-box p-2 text-light">
+        <div class="d-flex justify-content-between">
+          <h5>Balance</h5>
+          <h5>0 ETH</h5>
+        </div>
+        <div class="d-flex justify-content-between">
+          <h5>Floor price</h5>
+          <h5>0.52 ETH</h5>
+        </div>
+        <div class="d-flex justify-content-between">
+          <h5>Best offer</h5>
+          <h5>0.023 ETH</h5>
+        </div>
+      </div>
+
+      <div class="offer-box my-2 p-4">
+        <h5 class="m-0 pt-2 text-light">Offer</h5>
+        <div class="bg-light d-flex justify-content-between p-1 rounded-1">
+          <input type="number" class="input-st" min="1" maxlength="10" />
+          <select name="" id="" class="select">
+            <option value="eth">Eth</option>
+            <option value="dollar">$</option>
+          </select>
+        </div>
+
+        <h5 class="m-0 pt-2 text-light">Duration</h5>
+        <div class="d-flex justify-content-between">
+          <select name="" id="" class="select2">
+            <option value="">1 Month</option>
+            <option value="">2 Month</option>
+            <option value="">3 Month</option>
+            <option value="">4 Month</option>
+            <option value="">5 Month</option>
+          </select>
+        </div>
+
+        <button class="make-offer__btn w-100" (click)="closeDialog()">Make Offer</button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<!-- <main class="container">
   <h3 class="h3-t">Make An Offer</h3>
   <div class="main-container" *ngIf="trendingItem">
     <div style="display: flex; flex-direction: column; gap: 20px">
@@ -83,4 +156,4 @@
       </div>
     </div>
   </div>
-</main>
+</main> -->

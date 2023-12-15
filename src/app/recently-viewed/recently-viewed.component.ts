@@ -24,7 +24,7 @@ export class RecentlyViewedComponent implements OnInit {
         images: '../../assets/images/rectangle-1122.png',
       },
       {
-        images: '../../assets/images/rectangle-1123.png',
+        images: '../../assets/images/black-person.png',
       },
       {
         images: '../../assets/images/rectangle-1124.png',

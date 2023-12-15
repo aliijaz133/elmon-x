@@ -34,7 +34,7 @@ export class SaleListingComponent implements OnInit {
         trend_Id: '#5681',
       },
       {
-        image_url: '../../assets/images/rectangle-981.png',
+        image_url: '../../assets/images/desgin-frame.png',
         image_title: 'Bedlam Insanity',
         price: 35,
         trend_Id: '#5682',
@@ -64,7 +64,7 @@ export class SaleListingComponent implements OnInit {
         trend_Id: '#5686',
       },
       {
-        image_url: '../../assets/images/rectangle-1058-gbw.png',
+        image_url: '../../assets/images/rectangle-982.png',
         image_title: 'Look Mum, My Painting Got Into Art Basel!',
         price: 85,
         trend_Id: '#5687',
@@ -106,13 +106,13 @@ export class SaleListingComponent implements OnInit {
         trend_Id: '#5693',
       },
       {
-        image_url: '../../assets/images/rectangle-994.png',
+        image_url: '../../assets/images/black-person.png',
         image_title: 'Look Mum, My Painting Got Into Art Basel!',
         price: 155,
         trend_Id: '#5694',
       },
       {
-        image_url: '../../assets/images/rectangle-1035.png',
+        image_url: '../../assets/images/desgin-frame.png',
         image_title: 'Look Mum, My Painting Got Into Art Basel!',
         price: 165,
         trend_Id: '#5695',

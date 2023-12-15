@@ -33,7 +33,8 @@ export class TrendingDetailsComponent implements OnInit {
   }
 
   buyNow() {
-    this.dialog.open(BuyNowComponent, { disableClose: true });
+    this.dialog.open(BuyNowComponent, { disableClose: true,
+    width: '600px', });
   }
 
   openList() {

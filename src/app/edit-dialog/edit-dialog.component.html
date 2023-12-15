@@ -1,4 +1,41 @@
-<main class="container">
+<div class="container">
+  <h3>Edit Listing</h3>
+
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-12 my-2">
+      <div class="d-flex flex-column gap-3">
+        <h4>Price</h4>
+        <input
+          type="text"
+          [(ngModel)]="editedPrice"
+          (input)="onInputChange($event)"
+          placeholder="Enter new price"
+          class="input w-100"
+        />
+        
+      <button class="cancel-btn w-100" [mat-dialog-close]="'close'">Cancel</button>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-12 my-2">
+      <div class="d-flex flex-column gap-3">
+        <h4>Expiration Date</h4>
+        <select class="input w-100">
+          <option value="day1">1 Day</option>
+          <option value="day2">2 Day</option>
+          <option value="day3">3 Day</option>
+          <option value="day4">4 Day</option>
+          <option value="day5">5 Day</option>
+        </select>
+        
+      <button class="confirm-btn w-100" (click)="onSaveClick()">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <main class="container">
   <h3>Edit Listing</h3>
   <div class="main-container">
     <div class="input-container">
@@ -28,4 +65,4 @@
       <button class="confirm-btn" (click)="onSaveClick()">Confirm</button>
     </div>
   </div>
-</main>
+</main> -->

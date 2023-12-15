@@ -2,6 +2,13 @@ main {
   margin-top: 50px;
 }
 
+.table{
+  border: 1px solid #fff;
+}
+
+tr{
+  vertical-align: -webkit-baseline-middle;
+}
 th,
 td {
   background-color: #0e1118 !important;

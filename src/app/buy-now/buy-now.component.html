@@ -1,4 +1,22 @@
-<main class="container">
+<div class="buy-now-modal">
+  <h3>Buy Now</h3>
+
+  <div class="main-container col-12" *ngIf="trendingItem">
+    <div class="d-flex justify-content-between">
+      <h4>Edition</h4>
+      <h4>{{ trendingItem.trend_Id }}</h4>
+    </div>
+    <div class="d-flex justify-content-between">
+      <h4>Price</h4>
+      <h4>{{ trendingItem.price }}</h4>
+    </div>
+    <button class="continue-btn" (click)="continuePayment()">Continue</button>
+  </div>
+
+</div>
+
+
+<!-- <main class="container">
   <h3>Buy Now</h3>
   <div class="main-container" *ngIf="trendingItem">
     <div style="display: flex; justify-content: space-between">
@@ -11,4 +29,4 @@
     </div>
     <button class="continue-btn" (click)="continuePayment()">Continue</button>
   </div>
-</main>
+</main> -->
