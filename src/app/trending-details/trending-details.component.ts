@@ -12,6 +12,8 @@ import { BuyNowComponent } from '../buy-now/buy-now.component';
 export class TrendingDetailsComponent implements OnInit {
   @Input() trendingItem: any;
 
+  getTimeNow?: number;
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -22,6 +24,10 @@ export class TrendingDetailsComponent implements OnInit {
     this.route.queryParams.subscribe((params) => {
       this.trendingItem = JSON.parse(params['item']);
     });
+
+    setInterval(() => {
+      this.getTimeNow = Date.now();
+    }, 1);
   }
 
   backBtn() {
@@ -33,8 +39,7 @@ export class TrendingDetailsComponent implements OnInit {
   }
 
   buyNow() {
-    this.dialog.open(BuyNowComponent, { disableClose: true,
-    width: '600px', });
+    this.dialog.open(BuyNowComponent, { disableClose: true, width: '600px' });
   }
 
   openList() {
