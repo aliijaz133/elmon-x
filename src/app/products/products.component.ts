@@ -19,6 +19,8 @@ export class ProductsComponent implements OnInit {
 
   showLoader: boolean = false;
 
+  yearTime?: number;
+
   selectedTrendingItem: any;
 
   constructor(private router: Router, private toastr: ToastrService) {
@@ -137,5 +139,9 @@ export class ProductsComponent implements OnInit {
     });
 
     this.toastr.success('Open Trending Detail');
+
+    setInterval(() => {
+      this.yearTime = Date.now();
+    }, 1);
   }
 }
